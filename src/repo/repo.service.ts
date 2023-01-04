@@ -10,7 +10,6 @@ export class RepoService {
       auth: access_token
     })
     try{
-      console.log("hi");
       await octokit.request('POST /user/repos', {
         name: createRepoDto.reponame,
         description: createRepoDto.description,

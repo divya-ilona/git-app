@@ -2,7 +2,6 @@ import { Controller, Get, Post, Body, Param, Res, Render,Req,UseGuards } from '@
 import { RepoService } from './repo.service';
 import { CreateRepoDto } from './dto/create-repo.dto';
 import { AuthenticatedGuard } from 'src/auth/utils/Guards';
-import { Request } from 'express';
 import { createParamDecorator, ExecutionContext } from '@nestjs/common';
 import { User } from 'src/typeorm';
 
@@ -22,10 +21,7 @@ export class RepoController {
   @UseGuards(AuthenticatedGuard)
   @Render('status')
   create(@Body() createRepoDto: CreateRepoDto,@GetUser() user: User) {
-    console.log(createRepoDto);
-      console.log(user.accessToken);
-     const message=this.repoService.create(createRepoDto,user.accessToken);
-     return message;
+     return this.repoService.create(createRepoDto,user.accessToken);
   }
 
 }

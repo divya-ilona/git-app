@@ -10,10 +10,10 @@ export class GithubStrategy extends PassportStrategy(Strategy) {
         private readonly authService: AuthenticationProvider,
   ) {
     super({
-      clientID: 'Iv1.3bb5ff55784aad8f',
-      clientSecret: 'f063597ac3532c5afd40762db914c11ebc3d4dd9',
-      callbackURL: 'https://git-app-production.up.railway.app/api/v1/auth/redirect',
-      scope: ["read:user"],
+      clientID: '4c8c52b25117de51855d',
+      clientSecret: '2b5698fb2bc382d1d4efd57afd476abfb407f249',
+      callbackURL: 'https://git-app-production.up.railway.app/auth/redirect',
+      scope: ["read:user,repo,public_repo"],
     });
   }
 

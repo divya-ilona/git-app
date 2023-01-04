@@ -21,7 +21,7 @@ export class AuthController {
   @Get('redirect')
   @UseGuards(GithubAuthGuard)
   redirect(@Res() res: Response) {
-    res.redirect('https://git-app-production.up.railway.app/api/v1');
+    res.redirect('/');
   }
 
   /**

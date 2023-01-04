@@ -14,6 +14,6 @@ import {
       const response = ctx.getResponse<Response>();
       const status = exception.getStatus();
   
-      response.status(status).redirect('/api/v1/signin');
+      response.status(status).redirect('/signin');
     }
   }

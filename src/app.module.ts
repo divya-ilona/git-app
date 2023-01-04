@@ -6,14 +6,10 @@ import { RepoModule } from './repo/repo.module';
 import { AuthModule } from './auth/auth.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { entities } from './typeorm';
-import { ConfigModule } from '@nestjs/config';
 import { ViewAuthFilter } from './utils/exception';
 
 
-let envFilePath='.development.env';
-if(process.env.ENVIRONMENT==='PRODUCTION')
-  envFilePath='.env.production';
-console.log(`env in ${process.env.SQLite_DB_NAME}`);
+
 
 
 @Module({

@@ -18,11 +18,6 @@ async function bootstrap() {
   .get(AppModule)
   .getDataSource()
   .getRepository(TypeORMSession);
-  app.setGlobalPrefix('api/v1');
-  // app.enableCors({
-  //   origin: ['http://localhost:3000'],
-  //   credentials: true,
-  // });
   app.use(
     session({
       cookie: {
