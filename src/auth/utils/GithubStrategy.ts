@@ -12,7 +12,7 @@ export class GithubStrategy extends PassportStrategy(Strategy) {
     super({
       clientID: 'Iv1.3bb5ff55784aad8f',
       clientSecret: 'f063597ac3532c5afd40762db914c11ebc3d4dd9',
-      callbackURL: 'http://localhost:3000/api/v1/auth/redirect',
+      callbackURL: 'https://git-app-production.up.railway.app/api/v1/auth/redirect',
       scope: ["read:user"],
     });
   }
