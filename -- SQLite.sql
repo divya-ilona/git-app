@@ -1,0 +1,2 @@
+-- SQLite
+DESC session;
